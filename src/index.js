@@ -82,12 +82,10 @@ function decode(expr) {
   let result;
   let string = "";
   let newExpr = expr.match(/.{10}|.{1,2}/g);
-  console.log(newExpr);
+
   for (let i = 0; i < newExpr.length; i++) {
     result = morse(newExpr[i]);
-    console.log(result);
     string += result;
-    console.log(string);
   }
   return string;
 }
